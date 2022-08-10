@@ -43,7 +43,7 @@ onMounted(() => {
 <template>
   <div>
     <h1>Pokemon</h1>
-    <Search @addPokemonToTeam="(pokemon) => {store.team.addPokemonToTeam(pokemon)}"/>
+    <Search @addPokemonToTeam="(pokemon) => store.team.addPokemonToTeam(pokemon)"/>
     <List @removePokemonFromTeam="(pokemon) => store.team.removePokemonFromTeam(pokemon)" :team="store.team.value"/>
   </div>
 </template>

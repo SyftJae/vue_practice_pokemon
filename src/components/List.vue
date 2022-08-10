@@ -1,5 +1,6 @@
 <script setup>
-const props = defineProps({
+
+defineProps({
   team: Array
 })
 
@@ -12,8 +13,9 @@ const props = defineProps({
       <li v-for="pokemon in team" :key="pokemon.documentId">
         {{ pokemon.id }}
         {{ pokemon.name }}
+        {{ pokemon.nickname }}
         <ul>
-          <li v-for="type in poke.types">
+          <li v-for="type in pokemon.types">
             {{ type.type.name }}
           </li>
         </ul>
