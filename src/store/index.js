@@ -4,7 +4,7 @@ import { collection, addDoc, doc, deleteDoc, query, getDocs } from 'firebase/fir
 
 const teamRef = collection(db, 'team')
 
-export const store = reactive({
+const store = reactive({
   user: {
     data: {},
     isLoggedin: false,
@@ -56,3 +56,5 @@ export const store = reactive({
   }
 
 })
+
+export default store
