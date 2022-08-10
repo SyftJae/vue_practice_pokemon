@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { store } from './store'
+import store from './store'
 
 import { Search, List } from './components'
 
