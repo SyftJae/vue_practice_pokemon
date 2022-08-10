@@ -5,7 +5,16 @@ import { collection, addDoc, doc, deleteDoc, query, getDocs } from 'firebase/fir
 const teamRef = collection(db, 'team')
 
 export const store = reactive({
-  user: true,
+  user: {
+    data: {},
+    isLoggedin: false,
+    login() {
+      console.log('user logged in')
+    },
+    logout() {
+      console.log('user logged out')
+    }
+  },
   team: {
     value: [],
     async getTeam() {
