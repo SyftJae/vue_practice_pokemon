@@ -36,7 +36,8 @@ const store = reactive({
           id: pokemon.id,
           name: pokemon.name,
           nickname: "",
-          types: pokemon.types
+          types: pokemon.types,
+          userRef: doc(db, "users", docId)
         }
         let doc = await addDoc(teamRef, { ...relevantData })
         this.value.push({
@@ -52,9 +53,7 @@ const store = reactive({
       const pokeRef = doc(db, "team", pokemon.documentId)
       await deleteDoc(pokeRef)
     }
-    
   }
-
 })
 
 export default store

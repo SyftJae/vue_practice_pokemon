@@ -20,3 +20,4 @@ onMounted(() => {
     <List @removePokemonFromTeam="(pokemon) => store.team.removePokemonFromTeam(pokemon)" :team="store.team.value"/>
   </div>
 </template>
+
