@@ -1,10 +1,3 @@
-<script setup>
-import { ref } from 'vue'
-import store from '../store'
-
-const loginInput = ref("")
-</script>
-
 <template>
 <div>
   <h2>Login</h2>
@@ -14,3 +7,11 @@ const loginInput = ref("")
   </form>
 </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import store from '../store'
+
+const loginInput = ref("")
+</script>
+
